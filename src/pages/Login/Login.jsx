@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
   const msg = useSelector((state) => state.authReducer.message);
-  console.log(msg);
+
   const [errmsg, setErrMsg] = useState("");
   useEffect(() => {
     console.log(msg, "latesterr");
