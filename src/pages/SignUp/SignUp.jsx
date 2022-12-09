@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signUp } from "../../actions/AuthAction.js";
 const SignUp = () => {
   const msg = useSelector((state) => state.authReducer.message);
-  console.log(msg, "jhdhd");
+
   const [errmsg, setErrMsg] = useState("");
   useEffect(() => {
     console.log(msg, "latesterr");
