@@ -19,16 +19,7 @@ const LogoSearch = () => {
   return (
     <div className="LogoSearch">
       <img width={"47px"} height={"42px"} src={Logo} alt="" />
-      <div className="Search">
-        <input
-          type="text"
-          placeholder="#Explore"
-          onChange={(e) => setQuery(e.target.value.toLowerCase())}
-        />
-        <div className="s-icon">
-          <UilSearch onClick={() => setOpenSearch((prev) => !prev)} />
-        </div>
-      </div>
+      <span>SOCIOUT</span>
     </div>
   );
 };
