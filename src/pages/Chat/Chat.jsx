@@ -6,7 +6,7 @@ import NavIcons from "../../components/NavIcons/NavIcons";
 import "./Chat.css";
 import { useEffect } from "react";
 import { userChats } from "../../api/ChatRequest";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { io } from "socket.io-client";
 
 const Chat = () => {
