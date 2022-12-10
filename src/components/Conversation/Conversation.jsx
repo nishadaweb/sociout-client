@@ -30,8 +30,8 @@ const Conversation = ({ data, currentUser, online }) => {
           <img
             src={
               userData?.profilePicture
-                ? process.env.REACT_APP_PUBLIC_FOLDER + userData.profilePicture
-                : process.env.REACT_APP_PUBLIC_FOLDER + "defaultProfile.png"
+                ? https://sociout-server.lapstore.online/images/ + userData.profilePicture
+                : https://sociout-server.lapstore.online/images/ + "defaultProfile.png"
             }
             alt="Profile"
             className="followerImage"
