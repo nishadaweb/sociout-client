@@ -7,7 +7,7 @@ import * as userApi from "../../api/UserRequest.js";
 const ProfileCard = ({ location }) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   console.log(user, "userrrrrrr");
-  const serverPublic = "https://sociout-server.lapstore.online/images/";
+  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
   const posts = useSelector((state) => state.postReducer.posts);
   const [profileUser, setProfileUser] = useState({});
   const params = useParams();

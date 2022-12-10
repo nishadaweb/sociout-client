@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Comment from "../../img/comment.png";
 import { createChat } from "../../api/ChatRequest";
 const User = ({ person }) => {
-  const publicFolder = "https://sociout-server.lapstore.online/images/";
+  const publicFolder = process.env.REACT_APP_PUBLIC_FOLDER;
   const { user } = useSelector((state) => state.authReducer.authData);
   const dispatch = useDispatch();
   const navigate = useNavigate();
