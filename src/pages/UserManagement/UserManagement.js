@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +11,7 @@ import Paper from "@mui/material/Paper";
 import { Button } from "react-bootstrap";
 import { Typography } from "@mui/material";
 import Header from "../../Admin/Header/Header";
+import { blockUser, getUsers } from "../../api/AdminRequest";
 
 function UserManagement() {
   const [user, setUser] = useState([]);
@@ -22,7 +22,7 @@ function UserManagement() {
   }, []);
   async function usermanagement() {
     try {
-      const { data } = await axios.get("http://localhost:5000/admin/users");
+      const { data } = await getUsers();
       setUser(data.users);
     } catch (error) {
       console.log(error);
@@ -31,7 +31,7 @@ function UserManagement() {
 
   async function updateUser(id) {
     try {
-      const { data } = await axios.put("http://localhost:5000/admin/" + id, {});
+      const { data } = await blockUser();
       if (data.status) {
         usermanagement();
       }

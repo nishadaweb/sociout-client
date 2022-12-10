@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +12,7 @@ import { Button } from "react-bootstrap";
 import { Typography } from "@mui/material";
 import Tablerow from "../../components/Tablerow/Tablerow";
 import Header from "../../Admin/Header/Header";
+import { getAllPosts } from "../../api/AdminRequest";
 
 function PostManagement() {
   const [post, setPost] = useState([]);
@@ -23,7 +23,7 @@ function PostManagement() {
   }, []);
   async function postmanagement() {
     try {
-      const { data } = await axios.get("http://localhost:5000/admin/posts");
+      const { data } = await getAllPosts();
       console.log(data);
 
       setPost(data.post);
