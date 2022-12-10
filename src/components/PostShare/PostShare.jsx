@@ -15,7 +15,7 @@ const PostShare = () => {
   const desc = useRef();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.authReducer.authData);
-  const serverPublic = https://sociout-server.lapstore.online/images/;
+  const serverPublic = "https://sociout-server.lapstore.online/images/";
   const onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
       let img = event.target.files[0];

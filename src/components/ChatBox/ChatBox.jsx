@@ -93,9 +93,9 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
                   <img
                     src={
                       userData?.profilePicture
-                        ? https://sociout-server.lapstore.online/images/ +
+                        ? "https://sociout-server.lapstore.online/images/" +
                           userData.profilePicture
-                        : https://sociout-server.lapstore.online/images/ +
+                        : "https://sociout-server.lapstore.online/images/" +
                           "defaultProfile.png"
                     }
                     alt="Profile"

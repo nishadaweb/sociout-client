@@ -36,7 +36,7 @@ const Post = ({ data }) => {
   // const [showComments, setShowComments] = useState("");
   const [modalOpened, setModalOpened] = useState(false);
 
-  const serverPublic = https://sociout-server.lapstore.online/images/;
+  const serverPublic = "https://sociout-server.lapstore.online/images/";
 
   const handleLike = () => {
     setLiked((prev) => !prev);
@@ -185,7 +185,11 @@ const Post = ({ data }) => {
         </div>
       </Modal>
       <img
-        src={data.image ? https://sociout-server.lapstore.online/images/ + data.image : ""}
+        src={
+          data.image
+            ? "https://sociout-server.lapstore.online/images/" + data.image
+            : ""
+        }
         alt=""
       />
       <div className="postReact">
